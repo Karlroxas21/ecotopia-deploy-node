@@ -18,12 +18,11 @@ app.disable('x-powered-by');
 
 app.use(helmet.contentSecurityPolicy({
   directives: {
-    defaultSrc: ["'self'", "https://ecotopiabeta.live"], 
-    scriptSrc: ["'self'", "'unsafe-eval'", "'unsafe-inline'"],
-    styleSrc: ["'self'", "https://fonts.googleapis.com", "https://unpkg.com/aos@2.3.1/dist/aos.css", "https://pro.fontawesome.com/releases/v5.10.0/css/all.css", "https://fonts.cdnfonts.com/css/henry-sans", "'unsafe-inline'"],
-    imgSrc: ["'self'", "data:", "blob:", "'unsafe-inline'"],
-    scriptSrcAttr: ["'unsafe-inline'"],
-    reportTo: ["'csp-endpoint'"]
+    defaultSrc: ["'self'", "'ecotopiabeta.live'"], 
+    scriptSrc: ["'self'", "'unsafe-eval'", "'unsafe-inline'", "'ecotopiabeta.live'"],
+    styleSrc: ["'self'", "https://fonts.googleapis.com", "https://unpkg.com/aos@2.3.1/dist/aos.css", "https://pro.fontawesome.com/releases/v5.10.0/css/all.css", "https://fonts.cdnfonts.com/css/henry-sans", "'unsafe-inline'", "'ecotopiabeta.live'"],
+    imgSrc: ["'self'", "data:", "blob:", "'unsafe-inline'", "'ecotopiabeta.live'"],
+    scriptSrcAttr: ["'unsafe-inline'", "'ecotopiabeta.live'"],
     // Add more directives as needed
   }
 }));
