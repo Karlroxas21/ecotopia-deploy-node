@@ -18,7 +18,7 @@ app.disable('x-powered-by');
 
 app.use(helmet.contentSecurityPolicy({
   directives: {
-    defaultSrc: ["'self'", "http://ecotopiabeta.live"], 
+    defaultSrc: ["'self'", "https://ecotopiabeta.live"], 
     scriptSrc: ["'self'", "'unsafe-eval'", "'unsafe-inline'"],
     styleSrc: ["'self'", "https://fonts.googleapis.com", "https://unpkg.com/aos@2.3.1/dist/aos.css", "https://pro.fontawesome.com/releases/v5.10.0/css/all.css", "https://fonts.cdnfonts.com/css/henry-sans", "'unsafe-inline'"],
     imgSrc: ["'self'", "data:", "blob:", "'unsafe-inline'"],
@@ -83,7 +83,7 @@ const URI=process.env.DB_CONNECTION;
 
 mongoose.connect(URI)
 
-const allowedOrigin = ['dry-forest-52571-e7ad1e7e2bf2.herokuapp.com'];
+const allowedOrigin = ['hecotopiabeta.live'];
 
 // CORS Middleware
 const corsOptions = {
